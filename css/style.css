@@ -39,6 +39,7 @@
     gap: 30px;
     box-shadow: 5px 5px 8px rgba(0,0,0,0.336);
     height: fit-content;
+    animation: dark-to-light 0.3s ease-in-out;
 }
 
 #form-header {
@@ -145,4 +146,36 @@ gap: 20px;
 #login-button:hover {
     background-color: #ecba24ea;
     transform: scale(1.05);
+}
+
+.dark#login-form {
+    color: var(--color-light);
+    background-color: #000000c4;
+    animation: light-to-dark 0.3s ease-in-out;
+}
+
+.dark#login-form .inmput-field input,
+.dark#login-form .inmput-field i {
+    color: var(--color-light);
+}
+
+@keyframes dark-to-light {
+    0% {
+        background-color: var(--color-dark-3);
+    }
+
+    100% {
+        background-color: var(--color-light);
+    }
+}
+
+@keyframes light-to-dark {
+    0% {
+        background-color: var(--color-light);
+        
+    }
+
+    100% {
+        background-color: var(--color-dark-3);
+    }
 }
